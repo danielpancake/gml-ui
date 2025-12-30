@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"__ui_extra_n_macro",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"__ui_extra_n_macro",
+  "parent":{
+    "name":"gml-ui",
+    "path":"folders/gml-ui.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

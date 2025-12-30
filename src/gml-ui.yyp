@@ -21,14 +21,18 @@
   },
   "name":"gml-ui",
   "resources":[
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"oUIExample","path":"objects/oUIExample/oUIExample.yy",},},
+    {"id":{"name":"rmTest","path":"rooms/rmTest/rmTest.yy",},},
+    {"id":{"name":"__ui_extra_n_macro","path":"scripts/__ui_extra_n_macro/__ui_extra_n_macro.yy",},},
+    {"id":{"name":"UIButton","path":"scripts/UIButton/UIButton.yy",},},
     {"id":{"name":"UIElement","path":"scripts/UIElement/UIElement.yy",},},
     {"id":{"name":"UIRenderLayer","path":"scripts/UIRenderLayer/UIRenderLayer.yy",},},
+    {"id":{"name":"sButtonTest","path":"sprites/sButtonTest/sButtonTest.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"rmTest","path":"rooms/rmTest/rmTest.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
