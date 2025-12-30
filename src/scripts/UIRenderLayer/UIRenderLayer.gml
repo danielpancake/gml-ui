@@ -38,6 +38,7 @@ function UIRenderLayer(_sprite, _frame=0) constructor {
     };
     
     static copy = function() {
+        // TODO: maybe better copy?
         var _layer = new UIRenderLayer(sprite, frame);
         _layer.x = x;
         _layer.y = y;

@@ -2,7 +2,6 @@
 function UIButton(_x, _y, _w, _h, _callback=undefined) : UIElement(_x, _y, _w, _h) constructor {
     __super = {update, draw}; // get UIElement methods, perhaps for the LTS support
     
-    
     callback = _callback;
     
     update = function(_mx, _my) {
@@ -11,13 +10,13 @@ function UIButton(_x, _y, _w, _h, _callback=undefined) : UIElement(_x, _y, _w, _
         
         var _hover = point_in_rectangle(_mx, _my, _gx, _gy, _gx + w, _gy + h);
         
-        if (_hover && mouse_check_button(mb_left)) {
-            set_state("pressed");
-            if (callback != undefined) callback();
-        } else if (_hover) {
-            set_state("hover");
-        } else {
-            set_state("normal");
+        if (mouse_check_button_pressed(mb_left) && _hover) {
+            set_state(states.pressed);
+            //pressed_callback();
+        } else if (mouse_check_button_released(mb_left)) {
+            //released_callback();
+        } else if (!mouse_check_button(mb_left)) {
+            set_state(_hover ? states.hover : states.normal);
         }
         
         __super.update(_mx, _my);
@@ -32,6 +31,7 @@ function UIButton(_x, _y, _w, _h, _callback=undefined) : UIElement(_x, _y, _w, _
         draw_rectangle(_gx, _gy, _gx + w, _gy + h, false);
     };
     
-    // Helps with feather hints for styles
+    // Helps with feather hints for styles. Enums would require to be defined
+    // for each of the UI element, which is unwanted (at least, for now)
     static states = {normal:"normal", hover:"hover", pressed:"pressed"};
 }
