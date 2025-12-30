@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"UIRenderLayer",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"UIRenderLayer",
+  "parent":{
+    "name":"gml-ui",
+    "path":"folders/gml-ui.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
