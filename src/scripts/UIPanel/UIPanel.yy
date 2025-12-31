@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"UIPanel",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"UIPanel",
+  "parent":{
+    "name":"gml-ui",
+    "path":"folders/gml-ui.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

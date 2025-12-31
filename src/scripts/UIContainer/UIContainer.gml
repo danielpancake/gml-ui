@@ -1,4 +1,4 @@
-/// @func function(params)
+/// @func UIContainer(_x, _y, _w, _h)
 function UIContainer(_x, _y, _w, _h) : UIElement(_x, _y, _w, _h) constructor {
     __super = {update, draw};
     __children = [];

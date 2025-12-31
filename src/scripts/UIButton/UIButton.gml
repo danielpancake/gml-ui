@@ -1,4 +1,5 @@
 /// @func UIButton(_x, _y, _w, _h, [_callback])
+/// TODO: maybe move callbacks in styles? or something else closely designed (like styles but callbacks)
 function UIButton(_x, _y, _w, _h, _callback=undefined) : UIElement(_x, _y, _w, _h) constructor {
     __super = {update, draw}; // get UIElement methods, perhaps for the LTS support
     
