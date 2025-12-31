@@ -2,9 +2,12 @@
 function UIButton(_x, _y, _w, _h, _callback=undefined) : UIElement(_x, _y, _w, _h) constructor {
     __super = {update, draw}; // get UIElement methods, perhaps for the LTS support
     
+    
     callback = _callback;
     
-    update = function(_mx, _my) {
+    update_begin
+        __super.update(_mx, _my);
+        
         var _gx = get_global_x();
         var _gy = get_global_y();
         
@@ -18,13 +21,11 @@ function UIButton(_x, _y, _w, _h, _callback=undefined) : UIElement(_x, _y, _w, _
         } else if (!mouse_check_button(mb_left)) {
             set_state(_hover ? states.hover : states.normal);
         }
-        
-        __super.update(_mx, _my);
-    };
+    update_end;
     
-    fallback_draw = function(_global_x, _global_y) {
-        var _gx = _global_x + x;
-        var _gy = _global_y + y;
+    fallback_draw = function(_px, _py) {
+        var _gx = _px + x;
+        var _gy = _py + y;
         
         draw_set_alpha(1);
         draw_set_color(c_white);
